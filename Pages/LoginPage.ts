@@ -1,3 +1,5 @@
+import ElementHelper from '../helpers/elementHelper';
+
 class LoginPage {
 
     get username() {
@@ -12,10 +14,24 @@ class LoginPage {
         return $('#login');
     }
 
-    async login(user: string, pass: string) {
-        await this.username.setValue(user);
-        await this.password.setValue(pass);
-        await this.loginBtn.click();
+    async login(
+        username: string,
+        password: string
+    ) {
+
+        await ElementHelper.type(
+            this.username,
+            username
+        );
+
+        await ElementHelper.type(
+            this.password,
+            password
+        );
+
+        await ElementHelper.click(
+            this.loginBtn
+        );
     }
 }
 
