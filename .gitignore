@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Reports
+allure-results/
+allure-report/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+temp/
+.tmp/
+
+# Environment files
+.env
+
+# Mac system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Package lock (optional)
+package-lock.json
